@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário Glassmorphism | Bootstrap 5</title>
+</head>
+
+<body class="d-flex align-items-center justify-content-center min-vh-100 overflow-hidden position-relative">
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+
+    <form id="form" novalidate class="glass-form position-relative p-4 p-md-5 rounded-4 shadow-lg">
+        <h2 class="text-center text-white fw-bold mb-4">Cadastro</h2>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nome" placeholder="Nome">
+            <label for="nome">Nome</label>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="E-mail">
+            <label for="email">E-mail</label>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="telefone" placeholder="Telefone" maxlength="15">
+            <label for="telefone">Telefone</label>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="senha" placeholder="Senha">
+            <label for="senha">Senha</label>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" id="confirmar" placeholder="Confirmar senha">
+            <label for="confirmar">Confirmar senha</label>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <button type="submit" class="btn btn-gradient w-100 py-3 fw-semibold">Enviar</button>
+
+        <div id="success" class="alert alert-success text-center mt-3 mb-0 d-none">
+            ✅ Cadastro realizado com sucesso!
+        </div>
+    </form>
+
+    <script src="bootstrap.bundle.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+:root {
+    --primary: #7f5af0;
+    --secondary: #2cb67d;
+}
+
+body {
+    background: linear-gradient(135deg, #16161a, #242629);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.7;
+    animation: float 8s ease-in-out infinite alternate;
+}
+
+.blob--1 {
+    width: 300px;
+    height: 300px;
+    background: var(--primary);
+    top: 10%;
+    left: 15%;
+}
+
+.blob--2 {
+    width: 350px;
+    height: 350px;
+    background: var(--secondary);
+    bottom: 10%;
+    right: 15%;
+    animation-delay: -4s;
+}
+
+@keyframes float {
+    to {
+        transform: translate(40px, -40px) scale(1.1);
+    }
+}
+
+.glass-form {
+    z-index: 1;
+    width: min(420px, 90%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-form .form-control {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+}
+
+.glass-form .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(127, 90, 240, 0.5);
+}
+
+.glass-form .form-floating>label::after {
+    background: transparent !important;
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border: none;
+    color: #fff;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-gradient:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
